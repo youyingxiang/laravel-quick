@@ -4,7 +4,10 @@
 
 ## 安装
 - `composer require yxx/laravel-quick`
-- 生成翻译好的中文包 `php artisan vendor:publish--provider="Yxx\\LaravelQuick\\LaravelQuickServiceProvider"`
+- 生成翻译好的中文包命令 
+
+    **linux 和 mac** `php artisan vendor:publish--provider="Yxx\\LaravelQuick\\LaravelQuickServiceProvider"`
+    **windows** `php artisan vendor:publish --provider="Yxx\LaravelQuick\LaravelQuickServiceProvider"`
 ## 怎么使用
 ```$xslt
 // api 返回状态码
