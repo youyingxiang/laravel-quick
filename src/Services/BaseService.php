@@ -6,7 +6,6 @@ use Illuminate\Support\Traits\Macroable;
 
 class BaseService
 {
-    use Macroable;
     /**
      * @param mixed ...$params
      * @return BaseService

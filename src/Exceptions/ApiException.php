@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Response as FoundationResponse;
 
 class ApiException extends Exception
 {
-    use JsonResponseTrait, Macroable;
+    use JsonResponseTrait;
 
     // 不论对错，返回的http status code均为200，在返回的json中code为负数时表示错误信息，大于0表示成功
     // 错误信息中把 http status code变为负数表示对应的含义，如 -404 表示 No Found
