@@ -40,3 +40,8 @@ CacheClient::lPush("test","1");
 具体参考Yxx\LaravelQuick\Services\CacheService里面的方法....
 ```
 
+## artisan 命令
+- 创建 Trait `php artisan quick:create-trait test`
+- 创建 Service  `php artisan quick:create-service Test/TestService`
+- 创建 Repository `php artisan quick:create-repository Test`
+

@@ -1,0 +1,10 @@
+<?php
+
+namespace DummyNamespace;
+
+use Yxx\LaravelQuick\Repositories\BaseRepository;
+
+class DummyClass extends BaseRepository
+{
+
+}

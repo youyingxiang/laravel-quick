@@ -9,14 +9,31 @@
 namespace Yxx\LaravelQuick;
 
 use Illuminate\Support\ServiceProvider;
+use Yxx\LaravelQuick\Console\CreateRepositoryCommand;
+use Yxx\LaravelQuick\Console\CreateServiceCommand;
+use Yxx\LaravelQuick\Console\CreateTraitCommand;
 use Yxx\LaravelQuick\Services\CacheService;
 
 class LaravelQuickServiceProvider extends ServiceProvider
 {
+    /**
+     * @var array
+     */
+    protected $commands = [
+        CreateTraitCommand::class,
+        CreateServiceCommand::class,
+        CreateRepositoryCommand::class,
+    ];
+
+    /**
+     * @see 注册服务
+     */
     public function register()
     {
         $this->registerServices();
+        $this->commands($this->commands);
     }
+
 
     public function boot()
     {
