@@ -9,16 +9,30 @@
 namespace Yxx\LaravelQuick;
 
 use Illuminate\Support\ServiceProvider;
+use Yxx\LaravelQuick\Services\CacheService;
 
 class LaravelQuickServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        dd('123');
+        $this->registerServices();
     }
 
     public function boot()
     {
-        dd('2134');
+        $this->registerPublishing();
+    }
+
+    protected function registerServices()
+    {
+        $this->app->singleton('quick.cache.service', CacheService::class);
+    }
+
+    protected function registerPublishing()
+    {
+        if ($this->app->runningInConsole()) {
+            $this->publishes([__DIR__ . '/../config' => config_path()]);
+            $this->publishes([__DIR__ . '/../resources/lang' => resource_path('lang')]);
+        }
     }
 }

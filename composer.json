@@ -26,7 +26,11 @@
         "laravel": {
             "providers": [
                 "Yxx\\LaravelQuick\\LaravelQuickServiceProvider"
-            ]
+            ],
+            "aliases": {
+                "RedisClient": "Illuminate\\Support\\Facades\\Redis::class",
+                "CacheClient": "Yxx\\LaravelQuick\\Facades\\CacheClient::class"
+            }
         }
     }
 }
