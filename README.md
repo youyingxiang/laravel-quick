@@ -3,7 +3,7 @@
 **laravel-quick** 封装了一些我们开发中常见的工具，使开发变得更高效
 
 ## 安装
-- `php artisan vendor:publish --provider="Yxx\\LaravelQuick\\LaravelQuickServiceProvider"`
+- 生成翻译好的中文包 `php artisan vendor:publish --provider="Yxx\\LaravelQuick\\LaravelQuickServiceProvider"`
 ## 怎么使用
 ```$xslt
 // api 返回状态码
