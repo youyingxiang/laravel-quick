@@ -33,8 +33,10 @@ return $this->error("错误");
 return $this->apiResponse(Response::HTTP_BAD_GATEWAY,"502错误");
 
 // 缓存的使用（封装了redis的一些方法）
+use Yxx\LaravelQuick\Facades\CacheClient;
+
 CacheClient::hSet("test","1","张三");
-CacheClient::hGet("test","1","张三");
+CacheClient::hGet("test","1");
 CacheClient::lPush("test","1");
 
 具体参考Yxx\LaravelQuick\Services\CacheService里面的方法....
